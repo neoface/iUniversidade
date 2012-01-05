@@ -1,0 +1,84 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @curso.object %>
+    <h1>Edit <%= @curso.id_curso%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @curso.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @curso.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id curso: </td>
+              <td class="itemValue"><input type="text" name="curso[id_curso]" value="<%= @curso.id_curso %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Id estabelecimento: </td>
+              <td class="itemValue"><input type="text" name="curso[id_estabelecimento]" value="<%= @curso.id_estabelecimento %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Codalternativo: </td>
+              <td class="itemValue"><input type="text" name="curso[codalternativo]" value="<%= @curso.codalternativo %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Curso: </td>
+              <td class="itemValue"><input type="text" name="curso[curso]" value="<%= @curso.curso %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Grau: </td>
+              <td class="itemValue"><input type="text" name="curso[grau]" value="<%= @curso.grau %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Duracao: </td>
+              <td class="itemValue"><input type="text" name="curso[duracao]" value="<%= @curso.duracao %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Ects: </td>
+              <td class="itemValue"><input type="text" name="curso[ects]" value="<%= @curso.ects %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Tipo concurso: </td>
+              <td class="itemValue"><input type="text" name="curso[tipo_concurso]" value="<%= @curso.tipo_concurso %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Vagas: </td>
+              <td class="itemValue"><input type="text" name="curso[vagas]" value="<%= @curso.vagas %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Prova ingresso desc: </td>
+              <td class="itemValue"><input type="text" name="curso[prova_ingresso_desc]" value="<%= @curso.prova_ingresso_desc %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Class min desc: </td>
+              <td class="itemValue"><input type="text" name="curso[class_min_desc]" value="<%= @curso.class_min_desc %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Formula calculo desc: </td>
+              <td class="itemValue"><input type="text" name="curso[formula_calculo_desc]" value="<%= @curso.formula_calculo_desc %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Descricao: </td>
+              <td class="itemValue"><input type="text" name="curso[descricao]" value="<%= @curso.descricao %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

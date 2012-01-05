@@ -1,0 +1,30 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @distrito.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @distrito.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="distrito[id_distrito]" class="fieldLabel">Id distrito</label>
+            <input type="text" id="distrito[id_distrito]" name="distrito[id_distrito]" <%= placeholder("Id distrito") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="distrito[distrito]" class="fieldLabel">Distrito</label>
+            <input type="text" id="distrito[distrito]" name="distrito[distrito]" <%= placeholder("Distrito") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

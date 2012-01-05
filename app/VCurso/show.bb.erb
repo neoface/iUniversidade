@@ -1,0 +1,40 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @v_curso.id_estabelecimento %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @v_curso.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdEstabelecimento</td>
+        <td class="itemValue"><%= @v_curso.id_estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdDistrito</td>
+        <td class="itemValue"><%= @v_curso.id_distrito%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Curso</td>
+        <td class="itemValue"><%= @v_curso.curso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Grau</td>
+        <td class="itemValue"><%= @v_curso.grau%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Estabelecimento</td>
+        <td class="itemValue"><%= @v_curso.estabelecimento%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,80 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @curso.id_curso %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @curso.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdCurso</td>
+        <td class="itemValue"><%= @curso.id_curso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdEstabelecimento</td>
+        <td class="itemValue"><%= @curso.id_estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Codalternativo</td>
+        <td class="itemValue"><%= @curso.codalternativo%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Curso</td>
+        <td class="itemValue"><%= @curso.curso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Grau</td>
+        <td class="itemValue"><%= @curso.grau%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Duracao</td>
+        <td class="itemValue"><%= @curso.duracao%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Ects</td>
+        <td class="itemValue"><%= @curso.ects%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">TipoConcurso</td>
+        <td class="itemValue"><%= @curso.tipo_concurso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Vagas</td>
+        <td class="itemValue"><%= @curso.vagas%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ProvaIngressoDesc</td>
+        <td class="itemValue"><%= @curso.prova_ingresso_desc%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ClassMinDesc</td>
+        <td class="itemValue"><%= @curso.class_min_desc%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">FormulaCalculoDesc</td>
+        <td class="itemValue"><%= @curso.formula_calculo_desc%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Descricao</td>
+        <td class="itemValue"><%= @curso.descricao%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

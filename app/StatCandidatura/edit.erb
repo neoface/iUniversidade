@@ -1,0 +1,106 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @stat_candidatura.id_estabelecimento %></h1>
+    <a href="<%= url_for :action => :show, :id => @stat_candidatura.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @stat_candidatura.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @stat_candidatura.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="stat_candidatura[id_estabelecimento]" name="stat_candidatura[id_estabelecimento]" value="<%= @stat_candidatura.id_estabelecimento %>" <%= placeholder( "Id estabelecimento" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[id_curso]" class="fieldLabel">Id curso</label>
+            <input type="text" id="stat_candidatura[id_curso]" name="stat_candidatura[id_curso]" value="<%= @stat_candidatura.id_curso %>" <%= placeholder( "Id curso" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[ano_lectivo]" class="fieldLabel">Ano lectivo</label>
+            <input type="text" id="stat_candidatura[ano_lectivo]" name="stat_candidatura[ano_lectivo]" value="<%= @stat_candidatura.ano_lectivo %>" <%= placeholder( "Ano lectivo" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[fase]" class="fieldLabel">Fase</label>
+            <input type="text" id="stat_candidatura[fase]" name="stat_candidatura[fase]" value="<%= @stat_candidatura.fase %>" <%= placeholder( "Fase" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[vagas]" class="fieldLabel">Vagas</label>
+            <input type="text" id="stat_candidatura[vagas]" name="stat_candidatura[vagas]" value="<%= @stat_candidatura.vagas %>" <%= placeholder( "Vagas" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[candidatos_m]" class="fieldLabel">Candidatos m</label>
+            <input type="text" id="stat_candidatura[candidatos_m]" name="stat_candidatura[candidatos_m]" value="<%= @stat_candidatura.candidatos_m %>" <%= placeholder( "Candidatos m" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[candidatos_f]" class="fieldLabel">Candidatos f</label>
+            <input type="text" id="stat_candidatura[candidatos_f]" name="stat_candidatura[candidatos_f]" value="<%= @stat_candidatura.candidatos_f %>" <%= placeholder( "Candidatos f" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[candidatos_1_opcao]" class="fieldLabel">Candidatos 1 opcao</label>
+            <input type="text" id="stat_candidatura[candidatos_1_opcao]" name="stat_candidatura[candidatos_1_opcao]" value="<%= @stat_candidatura.candidatos_1_opcao %>" <%= placeholder( "Candidatos 1 opcao" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[colocados_m]" class="fieldLabel">Colocados m</label>
+            <input type="text" id="stat_candidatura[colocados_m]" name="stat_candidatura[colocados_m]" value="<%= @stat_candidatura.colocados_m %>" <%= placeholder( "Colocados m" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[colocados_f]" class="fieldLabel">Colocados f</label>
+            <input type="text" id="stat_candidatura[colocados_f]" name="stat_candidatura[colocados_f]" value="<%= @stat_candidatura.colocados_f %>" <%= placeholder( "Colocados f" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[colocados_1_opcao]" class="fieldLabel">Colocados 1 opcao</label>
+            <input type="text" id="stat_candidatura[colocados_1_opcao]" name="stat_candidatura[colocados_1_opcao]" value="<%= @stat_candidatura.colocados_1_opcao %>" <%= placeholder( "Colocados 1 opcao" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[media_nota_cand]" class="fieldLabel">Media nota cand</label>
+            <input type="text" id="stat_candidatura[media_nota_cand]" name="stat_candidatura[media_nota_cand]" value="<%= @stat_candidatura.media_nota_cand %>" <%= placeholder( "Media nota cand" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[media_prova_ingresso]" class="fieldLabel">Media prova ingresso</label>
+            <input type="text" id="stat_candidatura[media_prova_ingresso]" name="stat_candidatura[media_prova_ingresso]" value="<%= @stat_candidatura.media_prova_ingresso %>" <%= placeholder( "Media prova ingresso" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[media_nota_12]" class="fieldLabel">Media nota 12</label>
+            <input type="text" id="stat_candidatura[media_nota_12]" name="stat_candidatura[media_nota_12]" value="<%= @stat_candidatura.media_nota_12 %>" <%= placeholder( "Media nota 12" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[media_nota_11]" class="fieldLabel">Media nota 11</label>
+            <input type="text" id="stat_candidatura[media_nota_11]" name="stat_candidatura[media_nota_11]" value="<%= @stat_candidatura.media_nota_11 %>" <%= placeholder( "Media nota 11" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[nota_ultimo_colocado]" class="fieldLabel">Nota ultimo colocado</label>
+            <input type="text" id="stat_candidatura[nota_ultimo_colocado]" name="stat_candidatura[nota_ultimo_colocado]" value="<%= @stat_candidatura.nota_ultimo_colocado %>" <%= placeholder( "Nota ultimo colocado" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stat_candidatura[novo_reformulado_flag]" class="fieldLabel">Novo reformulado flag</label>
+            <input type="text" id="stat_candidatura[novo_reformulado_flag]" name="stat_candidatura[novo_reformulado_flag]" value="<%= @stat_candidatura.novo_reformulado_flag %>" <%= placeholder( "Novo reformulado flag" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

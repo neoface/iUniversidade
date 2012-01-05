@@ -1,0 +1,104 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @stat_candidatura.object %>
+    <h1>Edit <%= @stat_candidatura.id_estabelecimento%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @stat_candidatura.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @stat_candidatura.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id estabelecimento: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[id_estabelecimento]" value="<%= @stat_candidatura.id_estabelecimento %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Id curso: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[id_curso]" value="<%= @stat_candidatura.id_curso %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Ano lectivo: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[ano_lectivo]" value="<%= @stat_candidatura.ano_lectivo %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Fase: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[fase]" value="<%= @stat_candidatura.fase %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Vagas: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[vagas]" value="<%= @stat_candidatura.vagas %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Candidatos m: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[candidatos_m]" value="<%= @stat_candidatura.candidatos_m %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Candidatos f: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[candidatos_f]" value="<%= @stat_candidatura.candidatos_f %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Candidatos 1 opcao: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[candidatos_1_opcao]" value="<%= @stat_candidatura.candidatos_1_opcao %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Colocados m: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[colocados_m]" value="<%= @stat_candidatura.colocados_m %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Colocados f: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[colocados_f]" value="<%= @stat_candidatura.colocados_f %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Colocados 1 opcao: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[colocados_1_opcao]" value="<%= @stat_candidatura.colocados_1_opcao %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Media nota cand: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[media_nota_cand]" value="<%= @stat_candidatura.media_nota_cand %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Media prova ingresso: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[media_prova_ingresso]" value="<%= @stat_candidatura.media_prova_ingresso %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Media nota 12: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[media_nota_12]" value="<%= @stat_candidatura.media_nota_12 %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Media nota 11: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[media_nota_11]" value="<%= @stat_candidatura.media_nota_11 %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Nota ultimo colocado: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[nota_ultimo_colocado]" value="<%= @stat_candidatura.nota_ultimo_colocado %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Novo reformulado flag: </td>
+              <td class="itemValue"><input type="text" name="stat_candidatura[novo_reformulado_flag]" value="<%= @stat_candidatura.novo_reformulado_flag %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

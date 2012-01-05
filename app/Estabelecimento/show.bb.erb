@@ -1,0 +1,76 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @estabelecimento.id_estabelecimento %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @estabelecimento.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdEstabelecimento</td>
+        <td class="itemValue"><%= @estabelecimento.id_estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Estabelecimento</td>
+        <td class="itemValue"><%= @estabelecimento.estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdDistrito</td>
+        <td class="itemValue"><%= @estabelecimento.id_distrito%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">TipoEnsino</td>
+        <td class="itemValue"><%= @estabelecimento.tipo_ensino%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Morada</td>
+        <td class="itemValue"><%= @estabelecimento.morada%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Localidade</td>
+        <td class="itemValue"><%= @estabelecimento.localidade%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CodPostal</td>
+        <td class="itemValue"><%= @estabelecimento.cod_postal%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Telefone</td>
+        <td class="itemValue"><%= @estabelecimento.telefone%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Fax</td>
+        <td class="itemValue"><%= @estabelecimento.fax%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Email</td>
+        <td class="itemValue"><%= @estabelecimento.email%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Site</td>
+        <td class="itemValue"><%= @estabelecimento.site%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Mapa</td>
+        <td class="itemValue"><%= @estabelecimento.mapa%></td>
+      </tr>
+      
+
+    </table>
+  </div>
+
+</div>

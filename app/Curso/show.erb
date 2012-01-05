@@ -1,0 +1,84 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @curso.id_curso %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @curso.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">IdCurso</div>
+            <div class="itemValue"><%= @curso.id_curso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IdEstabelecimento</div>
+            <div class="itemValue"><%= @curso.id_estabelecimento %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Codalternativo</div>
+            <div class="itemValue"><%= @curso.codalternativo %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Curso</div>
+            <div class="itemValue"><%= @curso.curso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Grau</div>
+            <div class="itemValue"><%= @curso.grau %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Duracao</div>
+            <div class="itemValue"><%= @curso.duracao %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Ects</div>
+            <div class="itemValue"><%= @curso.ects %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">TipoConcurso</div>
+            <div class="itemValue"><%= @curso.tipo_concurso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Vagas</div>
+            <div class="itemValue"><%= @curso.vagas %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ProvaIngressoDesc</div>
+            <div class="itemValue"><%= @curso.prova_ingresso_desc %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ClassMinDesc</div>
+            <div class="itemValue"><%= @curso.class_min_desc %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">FormulaCalculoDesc</div>
+            <div class="itemValue"><%= @curso.formula_calculo_desc %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Descricao</div>
+            <div class="itemValue"><%= @curso.descricao %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

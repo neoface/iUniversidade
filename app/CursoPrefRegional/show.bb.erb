@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @curso_pref_regional.id_estabelecimento %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @curso_pref_regional.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdEstabelecimento</td>
+        <td class="itemValue"><%= @curso_pref_regional.id_estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdCurso</td>
+        <td class="itemValue"><%= @curso_pref_regional.id_curso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdDistrito</td>
+        <td class="itemValue"><%= @curso_pref_regional.id_distrito%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Percentagem</td>
+        <td class="itemValue"><%= @curso_pref_regional.percentagem%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

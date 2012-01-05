@@ -1,0 +1,41 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @curso_pref_regional.id_estabelecimento %></h1>
+    <a href="<%= url_for :action => :show, :id => @curso_pref_regional.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @curso_pref_regional.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @curso_pref_regional.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_pref_regional[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="curso_pref_regional[id_estabelecimento]" name="curso_pref_regional[id_estabelecimento]" value="<%= @curso_pref_regional.id_estabelecimento %>" <%= placeholder( "Id estabelecimento" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_pref_regional[id_curso]" class="fieldLabel">Id curso</label>
+            <input type="text" id="curso_pref_regional[id_curso]" name="curso_pref_regional[id_curso]" value="<%= @curso_pref_regional.id_curso %>" <%= placeholder( "Id curso" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_pref_regional[id_distrito]" class="fieldLabel">Id distrito</label>
+            <input type="text" id="curso_pref_regional[id_distrito]" name="curso_pref_regional[id_distrito]" value="<%= @curso_pref_regional.id_distrito %>" <%= placeholder( "Id distrito" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_pref_regional[percentagem]" class="fieldLabel">Percentagem</label>
+            <input type="text" id="curso_pref_regional[percentagem]" name="curso_pref_regional[percentagem]" value="<%= @curso_pref_regional.percentagem %>" <%= placeholder( "Percentagem" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

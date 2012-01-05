@@ -1,0 +1,100 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @stat_candidatura.id_estabelecimento %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @stat_candidatura.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdEstabelecimento</td>
+        <td class="itemValue"><%= @stat_candidatura.id_estabelecimento%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IdCurso</td>
+        <td class="itemValue"><%= @stat_candidatura.id_curso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">AnoLectivo</td>
+        <td class="itemValue"><%= @stat_candidatura.ano_lectivo%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Fase</td>
+        <td class="itemValue"><%= @stat_candidatura.fase%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Vagas</td>
+        <td class="itemValue"><%= @stat_candidatura.vagas%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CandidatosM</td>
+        <td class="itemValue"><%= @stat_candidatura.candidatos_m%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CandidatosF</td>
+        <td class="itemValue"><%= @stat_candidatura.candidatos_f%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Candidatos1Opcao</td>
+        <td class="itemValue"><%= @stat_candidatura.candidatos_1_opcao%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ColocadosM</td>
+        <td class="itemValue"><%= @stat_candidatura.colocados_m%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ColocadosF</td>
+        <td class="itemValue"><%= @stat_candidatura.colocados_f%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Colocados1Opcao</td>
+        <td class="itemValue"><%= @stat_candidatura.colocados_1_opcao%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">MediaNotaCand</td>
+        <td class="itemValue"><%= @stat_candidatura.media_nota_cand%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">MediaProvaIngresso</td>
+        <td class="itemValue"><%= @stat_candidatura.media_prova_ingresso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">MediaNota12</td>
+        <td class="itemValue"><%= @stat_candidatura.media_nota_12%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">MediaNota11</td>
+        <td class="itemValue"><%= @stat_candidatura.media_nota_11%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">NotaUltimoColocado</td>
+        <td class="itemValue"><%= @stat_candidatura.nota_ultimo_colocado%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">NovoReformuladoFlag</td>
+        <td class="itemValue"><%= @stat_candidatura.novo_reformulado_flag%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

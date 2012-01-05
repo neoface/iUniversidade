@@ -1,0 +1,81 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @estabelecimento.id_estabelecimento %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @estabelecimento.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">IdEstabelecimento</div>
+            <div class="itemValue"><%= @estabelecimento.id_estabelecimento %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Estabelecimento</div>
+            <div class="itemValue"><%= @estabelecimento.estabelecimento %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IdDistrito</div>
+            <div class="itemValue"><%= @estabelecimento.id_distrito %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">TipoEnsino</div>
+            <div class="itemValue"><%= @estabelecimento.tipo_ensino %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Morada</div>
+            <div class="itemValue"><%= @estabelecimento.morada %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Localidade</div>
+            <div class="itemValue"><%= @estabelecimento.localidade %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CodPostal</div>
+            <div class="itemValue"><%= @estabelecimento.cod_postal %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Telefone</div>
+            <div class="itemValue"><%= @estabelecimento.telefone %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Fax</div>
+            <div class="itemValue"><%= @estabelecimento.fax %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Email</div>
+            <div class="itemValue"><%= @estabelecimento.email %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Site</div>
+            <div class="itemValue"><%= @estabelecimento.site %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Mapa</div>
+            <div class="itemValue"><%= @estabelecimento.mapa %></div>
+          </li>
+      
+
+
+    </ul>
+  </div>
+
+</div>

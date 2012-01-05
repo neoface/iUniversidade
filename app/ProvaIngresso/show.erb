@@ -1,0 +1,34 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @prova_ingresso.id_prova_ing %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @prova_ingresso.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">IdProvaIng</div>
+            <div class="itemValue"><%= @prova_ingresso.id_prova_ing %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ProvaIngresso</div>
+            <div class="itemValue"><%= @prova_ingresso.prova_ingresso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Descricao</div>
+            <div class="itemValue"><%= @prova_ingresso.descricao %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

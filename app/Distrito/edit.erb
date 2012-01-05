@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @distrito.id_distrito %></h1>
+    <a href="<%= url_for :action => :show, :id => @distrito.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @distrito.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @distrito.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="distrito[id_distrito]" class="fieldLabel">Id distrito</label>
+            <input type="text" id="distrito[id_distrito]" name="distrito[id_distrito]" value="<%= @distrito.id_distrito %>" <%= placeholder( "Id distrito" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="distrito[distrito]" class="fieldLabel">Distrito</label>
+            <input type="text" id="distrito[distrito]" name="distrito[distrito]" value="<%= @distrito.distrito %>" <%= placeholder( "Distrito" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,80 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @curso.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @curso.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="curso[id_curso]" class="fieldLabel">Id curso</label>
+            <input type="text" id="curso[id_curso]" name="curso[id_curso]" <%= placeholder("Id curso") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="curso[id_estabelecimento]" name="curso[id_estabelecimento]" <%= placeholder("Id estabelecimento") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[codalternativo]" class="fieldLabel">Codalternativo</label>
+            <input type="text" id="curso[codalternativo]" name="curso[codalternativo]" <%= placeholder("Codalternativo") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[curso]" class="fieldLabel">Curso</label>
+            <input type="text" id="curso[curso]" name="curso[curso]" <%= placeholder("Curso") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[grau]" class="fieldLabel">Grau</label>
+            <input type="text" id="curso[grau]" name="curso[grau]" <%= placeholder("Grau") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[duracao]" class="fieldLabel">Duracao</label>
+            <input type="text" id="curso[duracao]" name="curso[duracao]" <%= placeholder("Duracao") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[ects]" class="fieldLabel">Ects</label>
+            <input type="text" id="curso[ects]" name="curso[ects]" <%= placeholder("Ects") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[tipo_concurso]" class="fieldLabel">Tipo concurso</label>
+            <input type="text" id="curso[tipo_concurso]" name="curso[tipo_concurso]" <%= placeholder("Tipo concurso") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[vagas]" class="fieldLabel">Vagas</label>
+            <input type="text" id="curso[vagas]" name="curso[vagas]" <%= placeholder("Vagas") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[prova_ingresso_desc]" class="fieldLabel">Prova ingresso desc</label>
+            <input type="text" id="curso[prova_ingresso_desc]" name="curso[prova_ingresso_desc]" <%= placeholder("Prova ingresso desc") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[class_min_desc]" class="fieldLabel">Class min desc</label>
+            <input type="text" id="curso[class_min_desc]" name="curso[class_min_desc]" <%= placeholder("Class min desc") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso[formula_calculo_desc]" class="fieldLabel">Formula calculo desc</label>
+            <input type="text" id="curso[formula_calculo_desc]" name="curso[formula_calculo_desc]" <%= placeholder("Formula calculo desc") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

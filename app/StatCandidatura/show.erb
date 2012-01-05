@@ -1,0 +1,104 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @stat_candidatura.id_estabelecimento %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @stat_candidatura.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">IdEstabelecimento</div>
+            <div class="itemValue"><%= @stat_candidatura.id_estabelecimento %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IdCurso</div>
+            <div class="itemValue"><%= @stat_candidatura.id_curso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AnoLectivo</div>
+            <div class="itemValue"><%= @stat_candidatura.ano_lectivo %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Fase</div>
+            <div class="itemValue"><%= @stat_candidatura.fase %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Vagas</div>
+            <div class="itemValue"><%= @stat_candidatura.vagas %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CandidatosM</div>
+            <div class="itemValue"><%= @stat_candidatura.candidatos_m %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CandidatosF</div>
+            <div class="itemValue"><%= @stat_candidatura.candidatos_f %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Candidatos1Opcao</div>
+            <div class="itemValue"><%= @stat_candidatura.candidatos_1_opcao %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ColocadosM</div>
+            <div class="itemValue"><%= @stat_candidatura.colocados_m %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ColocadosF</div>
+            <div class="itemValue"><%= @stat_candidatura.colocados_f %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Colocados1Opcao</div>
+            <div class="itemValue"><%= @stat_candidatura.colocados_1_opcao %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MediaNotaCand</div>
+            <div class="itemValue"><%= @stat_candidatura.media_nota_cand %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MediaProvaIngresso</div>
+            <div class="itemValue"><%= @stat_candidatura.media_prova_ingresso %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MediaNota12</div>
+            <div class="itemValue"><%= @stat_candidatura.media_nota_12 %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MediaNota11</div>
+            <div class="itemValue"><%= @stat_candidatura.media_nota_11 %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotaUltimoColocado</div>
+            <div class="itemValue"><%= @stat_candidatura.nota_ultimo_colocado %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NovoReformuladoFlag</div>
+            <div class="itemValue"><%= @stat_candidatura.novo_reformulado_flag %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

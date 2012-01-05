@@ -1,0 +1,86 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @estabelecimento.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @estabelecimento.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="estabelecimento[id_estabelecimento]" name="estabelecimento[id_estabelecimento]" <%= placeholder("Id estabelecimento") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[estabelecimento]" class="fieldLabel">Estabelecimento</label>
+            <input type="text" id="estabelecimento[estabelecimento]" name="estabelecimento[estabelecimento]" <%= placeholder("Estabelecimento") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+              <label for="estabelecimento[id_distrito]" class="fieldLabel">Distrito</label>
+              <select id="estabelecimento[id_distrito]" name="estabelecimento[id_distrito]">
+              <% @distrito.each do |distrito|%>
+                 <option value="<%= distrito.id_distrito%>"><%= distrito.distrito %></option>
+               <%end%>
+              </select>
+          </div>
+          
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[tipo_ensino]" class="fieldLabel">Tipo ensino</label>
+            <input type="text" id="estabelecimento[tipo_ensino]" name="estabelecimento[tipo_ensino]" <%= placeholder("Tipo ensino") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[morada]" class="fieldLabel">Morada</label>
+            <input type="text" id="estabelecimento[morada]" name="estabelecimento[morada]" <%= placeholder("Morada") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[localidade]" class="fieldLabel">Localidade</label>
+            <input type="text" id="estabelecimento[localidade]" name="estabelecimento[localidade]" <%= placeholder("Localidade") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[cod_postal]" class="fieldLabel">Cod postal</label>
+            <input type="text" id="estabelecimento[cod_postal]" name="estabelecimento[cod_postal]" <%= placeholder("Cod postal") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[telefone]" class="fieldLabel">Telefone</label>
+            <input type="text" id="estabelecimento[telefone]" name="estabelecimento[telefone]" <%= placeholder("Telefone") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[fax]" class="fieldLabel">Fax</label>
+            <input type="text" id="estabelecimento[fax]" name="estabelecimento[fax]" <%= placeholder("Fax") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[email]" class="fieldLabel">Email</label>
+            <input type="text" id="estabelecimento[email]" name="estabelecimento[email]" <%= placeholder("Email") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[site]" class="fieldLabel">Site</label>
+            <input type="text" id="estabelecimento[site]" name="estabelecimento[site]" <%= placeholder("Site") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[mapa]" class="fieldLabel">Mapa</label>
+            <input type="text" id="estabelecimento[mapa]" name="estabelecimento[mapa]" <%= placeholder("Mapa") %> />
+          </div>
+
+
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

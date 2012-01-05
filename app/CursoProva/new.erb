@@ -1,0 +1,35 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @curso_prova.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @curso_prova.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="curso_prova[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="curso_prova[id_estabelecimento]" name="curso_prova[id_estabelecimento]" <%= placeholder("Id estabelecimento") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_prova[id_curso]" class="fieldLabel">Id curso</label>
+            <input type="text" id="curso_prova[id_curso]" name="curso_prova[id_curso]" <%= placeholder("Id curso") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="curso_prova[grupo_prova_id_prova_ing]" class="fieldLabel">Grupo prova id prova ing</label>
+            <input type="text" id="curso_prova[grupo_prova_id_prova_ing]" name="curso_prova[grupo_prova_id_prova_ing]" <%= placeholder("Grupo prova id prova ing") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

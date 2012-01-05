@@ -1,0 +1,21 @@
+<div class="pageTitle">
+         <h1>Filter by Company and Gender</h1>
+</div>
+       <div class="toolbar">
+         <div class="leftItem regularButton">
+<a href="<%= Rho::RhoConfig.start_path %>">Home</a>
+</div>
+         <div class="rightItem regularButton">
+           <a class="button" href="<%= url_for :action => :new %>">Novo</a>
+         </div>
+</div>
+       <div class="content">
+         <ul>
+           <% @v_curso.each do |curso| %>
+               <li>
+                 <a href="<%= url_for :action => :show, :id => curso.object %>">
+                   <span class="title"><%= curso.curso %></span><span  class="disclosure_indicator"></span>
+                 </a>
+               </li> 
+             <% end %>
+</ul> </div>

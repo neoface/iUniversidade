@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @prova_ingresso.id_prova_ing %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @prova_ingresso.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">IdProvaIng</td>
+        <td class="itemValue"><%= @prova_ingresso.id_prova_ing%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ProvaIngresso</td>
+        <td class="itemValue"><%= @prova_ingresso.prova_ingresso%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Descricao</td>
+        <td class="itemValue"><%= @prova_ingresso.descricao%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,102 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @estabelecimento.id_estabelecimento %></h1>
+    <a href="<%= url_for :action => :show, :id => @estabelecimento.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @estabelecimento.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @estabelecimento.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[id_estabelecimento]" class="fieldLabel">Id estabelecimento</label>
+            <input type="text" id="estabelecimento[id_estabelecimento]" name="estabelecimento[id_estabelecimento]" value="<%= @estabelecimento.id_estabelecimento %>" <%= placeholder( "Id estabelecimento" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[estabelecimento]" class="fieldLabel">Estabelecimento</label>
+            <input type="text" id="estabelecimento[estabelecimento]" name="estabelecimento[estabelecimento]" value="<%= @estabelecimento.estabelecimento %>" <%= placeholder( "Estabelecimento" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+              <label for="estabelecimento[id_distrito]" class="fieldLabel">Distrito</label>
+              <select id="estabelecimento[id_distrito]" name="estabelecimento[id_distrito]">
+              <% @distrito.each do |disresult|%>
+                 <option value="<%= disresult.id_distrito%>" 
+                 <%= "selected" if disresult.id_distrito.to_s ==  @estabelecimento.id_distrito.to_s%>
+                 >       
+                   <%=disresult.distrito %>
+                 </option>
+               <%end%>
+              </select>
+          </div>
+
+          
+                
+          <div data-role="fieldcontain">
+                <label for="estabelecimento[tipo_ensino]" class="fieldLabel">Tipo ensino</label>
+         
+                <select id="estabelecimento[tipo_ensino]" name="estabelecimento[tipo_ensino]">
+                    <option value="LICPUB">Please select</option>
+                    <option value="LICPUB">Licenciatura - Publico</option>
+                    <option value="LICPRI">Licenciatura - Privado</option>
+                    <option value="MESPUB">Mestrado - Publico</option>
+                    <option value="MESPRI">Mestrado - Privado</option>
+                </select>
+          
+            <input type="text" id="estabelecimento[tipo_ensino]" name="estabelecimento[tipo_ensino]" value="<%= @estabelecimento.tipo_ensino %>" <%= placeholder( "Tipo ensino" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[morada]" class="fieldLabel">Morada</label>
+            <input type="text" id="estabelecimento[morada]" name="estabelecimento[morada]" value="<%= @estabelecimento.morada %>" <%= placeholder( "Morada" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[localidade]" class="fieldLabel">Localidade</label>
+            <input type="text" id="estabelecimento[localidade]" name="estabelecimento[localidade]" value="<%= @estabelecimento.localidade %>" <%= placeholder( "Localidade" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[cod_postal]" class="fieldLabel">Cod postal</label>
+            <input type="text" id="estabelecimento[cod_postal]" name="estabelecimento[cod_postal]" value="<%= @estabelecimento.cod_postal %>" <%= placeholder( "Cod postal" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[telefone]" class="fieldLabel">Telefone</label>
+            <input type="text" id="estabelecimento[telefone]" name="estabelecimento[telefone]" value="<%= @estabelecimento.telefone %>" <%= placeholder( "Telefone" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[fax]" class="fieldLabel">Fax</label>
+            <input type="text" id="estabelecimento[fax]" name="estabelecimento[fax]" value="<%= @estabelecimento.fax %>" <%= placeholder( "Fax" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[email]" class="fieldLabel">Email</label>
+            <input type="text" id="estabelecimento[email]" name="estabelecimento[email]" value="<%= @estabelecimento.email %>" <%= placeholder( "Email" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[site]" class="fieldLabel">Site</label>
+            <input type="text" id="estabelecimento[site]" name="estabelecimento[site]" value="<%= @estabelecimento.site %>" <%= placeholder( "Site" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="estabelecimento[mapa]" class="fieldLabel">Mapa</label>
+            <input type="text" id="estabelecimento[mapa]" name="estabelecimento[mapa]" value="<%= @estabelecimento.mapa %>" <%= placeholder( "Mapa" ) %> />
+          </div>
+      
+
+
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>
