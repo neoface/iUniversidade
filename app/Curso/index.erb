@@ -1,6 +1,6 @@
 <div data-role="page">
 
-	<div data-role="header" data-position="inline">
+	<div data-role="header" data-position="inline" data-theme="a">
     <h1>Cursos</h1>
     <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
       Home
@@ -15,8 +15,9 @@
       <% @cursos.each do |curso| %>
       
           <li>
-            <a href="<%= url_for :action => :show, :id => curso.object %>">
-              <%= curso.id_curso %>
+            <h3><a href="<%= url_for :action => :show, :id => curso.object %>">
+              <%= curso.curso %></h3>
+            <p><%= curso.id_estabelecimento %></p>
             </a>
           </li>
       
