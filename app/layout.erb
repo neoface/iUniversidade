@@ -53,7 +53,7 @@
 
     <% end %>
 
-    <% if System::get_property('platform') == 'APPLE' %>
+    <% if System::get_property('platform') == '_APPLE' %>
         <link href="/public/css/iphone.css" type="text/css" rel="stylesheet"/>
     <% elsif System::get_property('platform') == 'ANDROID' %>
         <link href="/public/css/android.css" type="text/css" rel="stylesheet"/>
